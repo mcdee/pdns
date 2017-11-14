@@ -306,6 +306,7 @@ AC_CONFIG_FILES([
   ext/yahttp/yahttp/Makefile
   ext/json11/Makefile
   modules/bindbackend/Makefile
+  modules/ensbackend/Makefile
   modules/geoipbackend/Makefile
   modules/gmysqlbackend/Makefile
   modules/godbcbackend/Makefile
