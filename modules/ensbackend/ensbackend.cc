@@ -21,7 +21,6 @@ public:
     setArgPrefix("ens"+suffix);
     d_connection = getArg("connection");
     d_types = {};
-    d_answers = {};
     d_records = {};
 
     // TODO connect to Ethereum
@@ -201,7 +200,6 @@ public:
 
 private:
   std::list<QType> d_types;
-  std::list<string> d_answers;
   std::list<DNSResourceRecord> d_records;
   string d_connection;
 };
@@ -214,8 +212,8 @@ public:
   EnsFactory() : BackendFactory("ens") {}
   void declareArguments(const string &suffix="")
   {
-    // declare(suffix,"connection","Connection to Ethereum client","https://ropsten.orinocopay.com:8546/");
-    declare(suffix,"connection","Connection to Ethereum client","/home/ethereum/.ethereum/testnet/geth.ipc");
+    declare(suffix,"connection","Connection to Ethereum client","https://ropsten.orinocopay.com:8546/");
+    // declare(suffix,"connection","Connection to Ethereum client","/home/ethereum/.ethereum/testnet/geth.ipc");
   }
   DNSBackend *make(const string &suffix="")
   {
